@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--enlaza archivos css js , metadatos (solo cuando el archivo js es muy pesado se pone en el body
+		para que lo cargue al final y se vay cargando los demas datos de la pagina-->
+  <meta charset="UTF-8">
+  <title>Ejemplo de h1</title>
+</head>
+<body>
+	<!--body es el conenido que se visulizara-->
+  <header>
+    <!--header aqui va el logotipo de la pagina, el nombre principal,menu de navegacion, 
+        banner(la imagen principal de la pagina)-->
+       <hgroup>
+       	<!--<hgroup></hgroup> sirven para agrupar titulos <h> para que google los tome con elmismonivel
+       		de importancia-->
+       		<h1>TITULO PRINCIPAL</h1>
+            <h2>TITULO SECUNDARIO1</h2>
+
+       </hgroup>
+   
+  </header>
+
+  
+  	<h2>TITULO SECUNDARIO2</h2>
+  	<h2>TITULO SECUNDARIO3</h2>
+  	<h3>TITULO MAS PEQUEÑO SE PUEDE CAMBIAR EL TAMAÑO DE LALETR CON CSS</h3>
+
+  	<nav>
+  		<!--nav es elmenu de navegacion-->
+  	 <ul>
+  	 	<!--list item van dentro de una lista por eso van dentro de la <ul>(lista sin orden, te pone la lista con una 
+  	 	viñeta)
+  	 		<ol>(lista ordenada te enumera los items de 1, 2, 3) sino quieren ver los numeros o las viñetas se quitan con css-->
+
+  	 	<li><a href="index.html">Inico</a></li>
+  	 	<!--href para hacer referencia a algo-->
+  	 	<li><a href="http://udemy.com">Link</a></li>
+  	 	<!--target es para abrir otra pestaña-->
+  	 	<li><a target="_blank" href="http://udemy.com">Otra pestaña</a></li>
+  	 	<li><a href="#Ejemplo">Parte especifica</a></li>
+  	 	<!--para irse a un archivo de una carpeta atras "../prueba/prueba2.2.html"-->
+  	 	<li><a href="prueba/prueba2.2.html">Otra pagina interna</a></li>
+  	 </ul>
+  	 </nav>	
+  <!--</header>!!!!!!!!!!!!! -->
+  <section>
+  	<article>
+  		<p>Cualquier frase que yo quisiera crear</p>
+  		<p>Cualquier frase que yo quisiera crear</p>
+  		<p>Cualquier frase que yo quisiera crear <span>etiqueta se integra en eltexto sirve 
+  		si se quiere hacer esa parte del texto mas grande o diferente por medio de css</span></p>
+  		<p>Cualquier frase que yo quisiera crearCualquier frase que yo quisiera crear
+  		   Cualquier frase que yo quisiera crearCualquier frase que yo quisiera crear
+  	       Cualquier frase que yo quisiera <strong> CUALQUIER FRACE QUE QUIERA DESTACAR
+  	       REGULARMENE SE PONE EN NEGRITA PERO SE PUEDE ANULAR CON CSS ES UTIL PARA DESTACARLA Y HACERLA PRINCIPAL PARA EL USCADOR</strong>crearCualquier frase que yo quisiera crear
+  	       Cualquier frase que yo quisiera crear<em>IGUAL QUE EL STRONG PERO LA LETRA SE VE EN CURSIVA</em></p>
+  		
+  	</article>
+  	<article>
+  		  <!--<p> es para parrafo-->
+  		  <!--cada parrafo o cada <p> hace un salto de line al siguiente <p>..si se escribe
+  		  	un parrafo dentro de la etiqueta p y das salto de liea no lo reflejara en el navegador 
+  		  	--->
+  		<p>Cualquier frase que yo quisiera crear</p>
+  		<p>Cualquier frase que yo quisiera crear</p>
+  		<p>Cualquier frase que yo quisiera crear</p>
+  	</article>
+
+  </section>
+  <section id="Ejemplo"></section>
+  <!--<p> es para parrafo-->
+  <p>Objetivo!!!!</p>
+  <figure>
+  	<figure>Te gustan los obos?</figure>
+  	<img src="cuentos-sobre-lobos.jpg" alt="Lobos sueños magicos">
+  </figure>
+ <iframe  src="https://www.youtube.com/embed/hPc7m1ffj3s?start=11" frameborder="0" allowfullscreen></iframe>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZiCJVe1erM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<form id='form' name='form' method='post'action='suscribe.php'>
+	<span>Si quieres enterarte de losnuevos cursos, suscribete.</span>
+    <!--input de tipo text es para la cajia donde introduce texto  placeholder es la frase que tendra por defecto cuando no tenga nada en lacajita-->
+	<input id='email'  name='email' type='text' placeholder='Introduce tu email' onfocus='if(this.placeholder=='')this.placeholder='Introduce tu mail''/>
+    <!--input de tipo submit  es el boton  es el que hara la accion-->
+	<input type='submit' name='Submit' id='button' value='suscribete'/>
+</form>
+</body>
+<footer>
+	<div>
+		<section>
+			<p>redes sociales</p>
+		</section>
+	</div>
+</footer>
+
+</html>
