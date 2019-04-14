@@ -1,3 +1,3 @@
 # Practica
 Practica de pagina web
-Prbando GitHub
+Probando GitHub
