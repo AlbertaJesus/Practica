@@ -1,0 +1,540 @@
+
+div{
+	font-family: 'Arial';
+	background-color: #86E17D;
+	margin:10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width:80px;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+/*.triangulo_lateral
+	-webkit-transform:
+}*/
+a:focus{
+	color:red;
+}
+.caja:hover{
+	-webkit-animation:5s cambia_color 1;
+
+
+
+	/*animacion va a durar 5s se va a llamar cambia_color y se repetira una vez*/
+
+	/*animation-name:
+	indica elnombre qu se añadira a continucon
+	animation-duration:
+	tiempo total de la anaimacion
+	animation-iteration-count:
+	veces que se repetira. Para que sea bucle 
+	pondremos el valor "infinite"
+	animation-delay:
+	retardo con el que comenzara a aplicarse la
+	reproducion de la animacion*/
+
+}
+@-webkit-keyframes cambia_color{
+	/*invocar los keyframes*/
+	0%,70%{
+		background: blue;
+	}
+	50%{
+		background: red;
+		height: 200px;
+	}
+
+	/*otra forma de hacerlo 
+	from{
+	  background:blue;
+		}
+	  to{
+	    background:yellow;
+	  	}*/
+}
+.flash:hover{
+	-webkit-animation:1s flash 1;
+
+}
+@-webkit-keyframes flash{
+	0%,50%,100%{
+        opacity: 1;
+	}
+	25%,75%{
+		opacity: 0;
+	}
+	
+}
+.click:hover{
+	-webkit-animation:0.7s click 1;
+}
+@-webkit-keyframes click{
+	25%,75%{
+		-webkit-transform:scale(0.8);
+		/*escala delelemento que creza el cuadroa una escala de .8*/
+        }
+     50%{
+ 
+         -webkit-transform:scale(1.1);
+     }   
+ }
+
+   .chicle:hover{
+   	-webkit-animation:1s chicle 1;
+   }
+@-webkit-keyframes chicle{
+
+   30%{
+   	  -webkit-transform: 
+   	  scaleX(1.25)/*anchura la vamos a incrementar*/
+   	  scaleY(0.75);/*la altura se va  reducir*/
+   }
+   50%{
+   	 -webkit-transform: 
+   	  scaleX(0.75)
+   	  scaleY(1.25);
+   }
+   60%{
+   	 -webkit-transform: 
+   	  scaleX(1.15)
+   	  scaleY(0.85);
+   }
+}
+.vibrador:hover{
+		-webkit-animation:1s vibrador infinite;
+
+}  
+@-webkit-keyframes vibrador{
+   10%,30%,50%,70%,90%{
+   	-webkit-transform:translateX(-10px);/*se mueve 10px a la izquierda* orizntal/
+
+   }
+   20%,40%,60%,80%{
+   	-webkit-transform:translateX(10px);/*se mueva a a la derecha orizoltal*/
+   }
+   5%,25%,45%,65%,85%{
+   	-webkit-transform:translateY(-10px);/*la traslacion es vertical cn y*/
+
+   }
+   15%,35%,55%,75%{
+   	-webkit-transform:translateY(10px);/*se mueva hacia ariba  translacion vertical*/
+   }
+}
+
+.cartel:hover{
+		-webkit-animation:1s cartel 1;
+		-webkit-transform-origin:top center;
+		/*origin es donde va a ser el origen de la tranformcion
+		aqui es ariba n el centro*/
+}
+@-webkit-keyframes cartel{
+	20%{
+		-webkit-transform:rotate(15deg);
+		/*rotate es para hacer movimientos crculares deg son grados*/
+	}
+	40%{
+		-webkit-transform:rotate(-10deg);
+	}
+	60%{
+		-webkit-transform:rotate(5deg);
+	}
+	80%{
+		-webkit-transform:rotate(-3deg);
+	}
+
+}
+.balanceo:hover{
+	-webkit-animation:1s balanceo 1;
+}
+@-webkit-keyframes balanceo{
+ 20%{
+ 	-webkit-transform:scale(0.7)
+                      rotate(-6deg);
+ }
+ 30%,70%{
+ 	-webkit-transform:scale(1.1)
+                      rotate(6deg);
+ }
+ 50%,90%{
+ 	-webkit-transform:scale(1.1)
+                      rotate(-6deg);
+ }
+}
+.vayven:hover{
+	-webkit-animation:1s vayven 1
+
+}
+
+@-webkit-keyframes vayven{
+15%{	
+ -webkit-transform:rotate(-10deg)
+                    translateX(-25%);  
+ }
+ 30%{	
+ -webkit-transform:rotate(5deg)
+                    translateX(20%);  
+ }
+ 45%{	
+ -webkit-transform:rotate(-3deg)
+                    translateX(-10%);  
+ }
+ 60%{	
+ -webkit-transform:rotate(2deg)
+                    translateX(5%);  
+ }
+ 75%{	
+ -webkit-transform:rotate(-1deg)
+                    translateX(-3%);  
+ }
+}
+.descolgado{
+	-webkit-animation:1s descolgado 1;
+    -webkit-transform-origin:top left;
+    /*el comienzo de la tranformacion sera en la ezquina derecha*/
+}
+@-webkit-keyframes descolgado{
+   20%,60%{
+   	-webkit-transform:rotate(80deg);
+   }
+   40%{
+     -webkit-transform:rotate(60deg);
+   }
+   80%{
+   	opacity:1;
+   	-webkit-transform:rotate(60deg);
+   }
+   100%{
+   	-webkit-transform:translateY(400px);
+   	opacity: 0;
+   }
+}
+.inRotativo{
+	-webkit-animation:1s inRotativo 1;
+}
+@-webkit-keyframes inRotativo{
+   0%{
+   	opacity: 0;
+   	-webkit-transform:translateX(-100%)
+   	                  rotate(-260deg);
+   }
+}
+.outRotativo{
+	-webkit-animation:1s outRotativo 1;
+}
+@-webkit-keyframes outRotativo{
+   100%{
+   	opacity: 0;
+   	-webkit-transform:translateX(100%)
+   	                  rotate(260deg);
+   }
+}
+.rebote{
+	-webkit-animation:1s rebote 1;
+}
+@-webkit-keyframes rebote{
+	20%,50%,80%{
+		-webkit-transform:translateY(0px);
+		/*para que se quede quieto se pone cero
+		y empiece al 30%*/
+	}
+	30%{
+		-webkit-transform:translateY(-45px);
+	}
+	60%{
+		-webkit-transform:translateY(-25px);
+	}
+}
+.rebotein{
+	-webkit-animation:1s rebotein 1;
+  }
+  @-webkit-keyframes rebotein{
+     0%{
+     	opacity: 0;
+     	-webkit-transform:scale(0.3);
+     }
+  } 50%{
+  	opacity: 1;
+  	-webkit-transform:scale(1.1);
+  }
+  70%{
+  	-webkit-transform:scale(0.9);
+  }
+.rebotelado{
+	-webkit-animation:1s rebotelado 1;
+}
+@-webkit-keyframes rebotelado{
+	0%{
+		opacity: 0;
+		-webkit-transform:translateX(-2000px);
+	}
+	50%{
+		opacity:1;
+		-webkit-transform:translateX(30px);
+	}
+	70%{
+		-webkit-transform:translateX(-10px);
+	}
+}
+.salida{
+	-webkit-animation:1s salida 1;
+}
+@-webkit-keyframes salida{
+	25%{
+		-webkit-transform:scale(0.9);
+	}
+	50%{
+		opacty:1;
+	-webkit-transform:scale(1.1);
+    }
+    100%{
+    	opacity:0; 
+    	-webkit-transform:scale(0);
+    }
+}
+.salidaout{
+	-webkit-animation:1s salidaout 1;
+}
+@-webkit-keyframes salidaout{
+	20%{
+		opacity:1;
+		-webkit-transform:translateY(20px);
+	}
+	100%{
+		opacty:0;
+		-webkit-transform:translateY(-500px);
+		/*entre mas pixeles se va mas rapido la animacion*/
+	}
+
+}
+.aparicion{ /*fade*/
+	-webkit-animation:2s aparicion 1;
+}
+@-webkit-keyframes aparicion{
+    0%{
+    	opacity: 0;
+    }
+    50%{
+    	opacity: 0.2;
+    }
+}
+ .faderight{
+ 	position: relative;
+ 	-webkit-animation:2s faderight 1;
+ 	overflow: hidden;
+}
+@-webkit-keyframes faderight{
+    0%{
+    	opacity: 0;
+    }
+    50%{
+    	opacity: 0.2;
+    }
+}
+.tapa{
+	position: absolute;
+	top:0;
+	left: 120px;
+	margin: 0;
+	background: white;
+	-webkit-animation:2s retirada 1;
+}
+@-webkit-keyframes retirada{
+   0%{
+   	left:0px;
+   }
+}
+.velozin{
+	-webkit-animation:1s velozin 1;
+
+}
+@-webkit-keyframes velozin{
+	0%{
+		opacity: 0;
+		-webkit-transform:translateX(-100%)
+		                  skewX(30deg);
+		/*100% es el desplazamieno del tramaño de la caja
+		skew es para que se incline a qui seria en el eje de las x*/
+
+	}
+	60%{
+		opacity: 1;
+		-webkit-transform:translateX(-20%)
+		                  skewX(-30deg);
+	}
+   80%{
+		-webkit-transform:translateX(0%)
+		                  skewX(15deg);
+    }
+}
+.velozout{
+	-webkit-animation:1s velozout 1;
+}
+@-webkit-keyframes velozout{
+  15%{
+  	opacity:1;
+  }
+  100%{
+  	-webkit-transform:translateX(-200%)
+  	                  skewX(-70deg);
+  	opacity:0;                  
+  }
+}
+.giro{
+	-webkit-transform-origin:center;
+	/*para indicar que el punto origen  
+	donde va a empezar a girar vaa ser en el centro de la caja*/
+	-webkit-animation:1s giro 1;
+}
+@-webkit-keyframes giro{
+     0%{
+     	opacity: 0;
+     	-webkit-transform:rotate(-200deg);
+     }
+}
+.giro2{
+	-webkit-transform-origin:left bottom;
+	/*el origen en elsentido orizontal(left) y vertical(bottom)*/
+	-webkit-animation:1s giro2 1;
+}
+@-webkit-keyframes giro2{
+  0%{
+  	opacity:0;
+  	-webkit-transform:rotate(-100deg);
+  }
+}
+.sombra_movil{
+	-webkit-transform:translateX(0);
+}
+.sombra_movil:hover{
+	-webkit-transform:translateY(-6px);
+	-webkit-animation:1.5s movercaja infinite;
+}
+@-webkit-keyframes movercaja{
+	50%{
+		-webkit-transform:translateY(-3p);
+	}
+}
+.sombra_movil:before{
+	position: absolute;
+	content:'';
+	top:100%;
+	left:5%;
+	height: 10px;
+	width:90%;
+	opacity: 0;
+	background: -webkit-radial-gradient(center,
+		ellipse, rgba(0,0,0,0.35)0%,
+		         rgba(0,0,0,0)80%);
+-webkit-transition-duration:0.3s;
+}
+.sombra_movil:hover:before{
+	opacity: 1;
+	-webkit-transform:translateY(6px);
+}
+.arrow{
+	position:relative;
+}
+.arrow:before{
+   -moz-transition-duration:0.3s;
+   content:'';
+   /*caracteristicas para  formar el triangulo #a8cf45...*/
+   border-color:transparent #a8cf45
+                transparent transparent;
+   border-style: solid;
+   border-width:15px 15px 15px 0;
+
+   /*Posicioanamiento del triangulo en la caja*/
+   left: 5px;
+   position: absolute;
+   top:50%;
+   margin-top:-15px;  
+}
+.arrow:hover:before{
+	-webkit-animation:1s moverflecha infinite;
+	/*se manda llamar a la anmacion*/
+}
+@-webkit-keyframes moverflecha{
+/*animaion delefecto flecha*/
+  25%{
+  	left:-15px;/*para que se salga fuera de la cja padre*/
+    -webkit-transform:rotate(0deg);
+    /*la rotacion en 0 para que no empiece antes de tiempo*/
+   
+  }
+  65%{
+  	left:-15px;
+  	-webkit-transform:rotate(180deg);
+  }
+  90%
+  {
+  	-webkit-transform:rotate(180deg);
+  	/*que mantenga esa rotacion y no se vaya a 0 que siga al 180*/
+  }
+}
+/*animaciones 3D++*/
+.giro3D{
+/*	-webkit-transform:perspective()/*para darle  el efecto 3d representa 
+	que tan lejos estamos de la caja poco pixeles de distancia los efectos 
+	estan muy pronunciados */
+	                 /* rotateX(50deg);*/
+  -webkit-animation:1.5s giroX 1;
+  /*-webkit-backface-visibility:visible  es para que sea
+  visible laparte de atras*/
+}
+@-webkit-keyframes giroX{
+	0%{
+		opacity:0.5;
+		-webkit-transform:perspective(200px)
+		                  rotateX(-20deg);
+	}
+
+	40%{
+		-webkit-transform:perspective(200px)
+		                  rotateX();
+	}
+	70%{
+		-webkit-transform:perspective(200px)
+		                  rotateX(20deg);
+	}
+}
+.giroOutY{
+	-webkit-animation:1.5s giroOutY 1 ;
+   
+}
+@-webkit-keyframes giroOutY{
+  100%{
+  	opacity:0.3;/*para al finalizar se ve un poco y no termine en 0 de repente*/
+  	-webkit-transform:perspective(80px)/*entre mas pixeles se ve mas chico*/
+  	                  rotateY(90deg);
+  }
+}
+.giro3D2{
+	-webkit-animation:1s giro3D2 1;
+	-webkit-backface-visibility:visible;
+	/*-webkit-backface-visibility:hidden; para esconderla vista trasera*/
+}
+@-webkit-keyframes giro3D2{
+   40%{
+   	-webkit-transform:perspective(100px)
+   	                  rotateY(170deg)
+   	                  translateZ(120px);/*hace elefecto que va para 
+   	                  atras influye el orden enque se ponga el traslatez
+   	                  si se pone a la mitad de las propiedades primero hace
+   	                  la traslacion y luego la rotacion*/
+   }
+   50%{
+   	-webkit-transform:perspective(100px)
+   	                  rotateY(190deg)
+   	                  translateZ(120px);
+   }
+   80%{
+   	-webkit-transform:perspective(100px)
+   	                  rotateY(360deg);
+   }
+   100%{
+   	-webkit-transform:perspective(100px)
+   	                  rotateY(360deg);
+   }
+}
