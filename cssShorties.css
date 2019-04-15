@@ -1,0 +1,337 @@
+
+/*PREFIJOS PARA CADA NAVEGADOR
+   Existen propiedades que necesitan poner elprefijo del navegador 
+   que sera utilizado de lo contrario no aplicara el cambio
+
+      -webkit     Google Chrome, Safari,Navegador Android
+      -moz-       Firefox
+      -o-         Opera
+      -ms-        Internet Explorer, Edge
+      -khtml-     Konqueror
+ */     
+
+/*
+para poner fuentes internas de los achivos de a pc perootengo ninguna
+@font-face{    
+	font-family: "irlandesa";
+	src:url(17-fuente/tipodefuente.etencion)
+	src: local('?'),//es para poner otras opciones de fuente
+        url("font/irlandesa.woff") format("woff"),
+        url("font/irlandesa.ttf") format("truetype");;
+}*/
+     
+
+header{
+	   width:100%;
+	   height:60px;
+       font-size: 20px;
+       margin-bottom: 2%;
+       
+      
+  
+
+     
+	/* para el color background:red;*/
+
+
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #000 0%, #fff 100%);
+
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #000 0%, #fff 100%);
+
+    /* IE 6 - 9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 );
+
+    /* IE 10+ */
+    background: -ms-linear-gradient(top, #000 0%, #fff 100%);
+
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #000 0%, #fff 100%);  
+
+
+	
+
+	/*rgba(127,51,191,0);*/
+}
+ 
+
+
+h2{
+	width: 100%;
+	height: 40px;
+
+	color: gray;
+	margin-top: 2%;
+	position: relative;
+	
+}
+
+ 
+
+/*.ajolot01{
+	background: blue;
+	width:5%;
+	height:5px;
+    position: relative;
+}*/
+/*------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------MENU-------------------------------------------------------------------------*/
+  .menu{
+  	width: 100%;
+  	height:85px; 
+ 	color: pink;
+ 	/*Margin el margen de las cajas top es la parte de ariba y bottom laparte de abajo*/
+ 	margin-bottom: 4%;
+ 	/*position: fixed;*/
+ 	
+ }  
+ .arrivals{
+ 
+ 	width: 70px;
+ 	height: 50px;
+ 	
+ 	background-color: red;
+    position:relative;
+    top:-180px;
+    left:  350px;
+    border:purple 5px solid ;/*el color de bordo de los div
+    dashed es punteado, dotted borde on puntos, inset pone un marco 3d hacia denro
+    el outset hacia fuea el contenido 3d*/
+    border-top-style:dotted;/*cambi aun aod del bordo */
+    text-shadow: 0px 0px 10px blue;/*sombras para texto
+    si el difuminado lo subes de nuneracion le da un sombrado a la letras
+    como de luz*/
+    transform:rotate(50deg); /*para girar lascjas*/
+   /*transform-origin:top right ; de ellado que se giraran las cajas
+     transform-origin:bottom center  gira de la parte de enmedio de la base*/
+  /*transform:skew(20deg,5deg) hace el cuadro en forma de rombo
+    transform:traslateY(-20px) se mueve un poco el cuadro
+     transform:tralateY()
+     transform:scale(1.2,0.5) cambia la scala de los cuadros*/
+
+ }
+
+ /*Position sttic       no hace caso las cordenadas relative si hace caso a las cordenadas cuando lo pones las
+ cordenadas negativas se sale del cuadro donde debe de estar es usado como para ofertas
+ Position absolute       es como no existiera  par los demas elementos en posicionamiento en visualizacion si,
+ si se  le ponen cordenadas se posiciona con respecto al body o toma las cordenadas del padre superior mas cercano 
+ que tenga ún position relative 
+ Position fixed se queda nosemueve las cordenadas se toman con respecto al body */
+
+ /*Para alinear la caja se utiliza vertical-align: top se alinean las cajas en la arte de ariba con 
+   middle se alinea la caja en medio y bottom abajo*/
+ .menuPadding{
+ 	padding: 3px;
+ 	/*displey es el margen que se le daran entre botes y no se despegan 
+ 	dysplay:none hace no visible alboton que se aplica ()transparente*/
+ 	display: inline-block;
+ 	boder:3px black;
+ }
+
+
+nav{
+    background: rgb(95,158,160);
+}
+ 
+/*--------------------------------------------FIN DE MENU---------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------*/
+/*cuando el cambio se hara en un idenificador se usa el simbolo #  */	
+
+ 
+
+.modelos{
+	margin-top: 3px;
+	margin-bottom: 2px;
+	min-width: 15%;
+	width: 80%;
+	height: 200%;
+	background: moccasin;
+	/*overflow: hidden;  para que los div entren a la caja padre, tambien todo lo que salga de la cja padre que no se vea
+	z-index: para hacer para adente o atras un elemnto entre mayor sea el numero de index mas adelante qedara sipre 
+	va acompañada de un positon 
+	visibility:hidden no mueestra elelemento
+	opacity se vuelve medio transparente tiene valor 0 y 1*/
+	border-radius: 1em;
+	border-top-right-radius: 50px /*solo hace curveado un lado derecho sperior del div*/
+}
+.modelos> article{
+	
+	margin-top: 5px;
+	margin-right: 5px; 
+	background: green;
+	display: inline-block;
+	vertical-align: middle;
+	border-top-left-radius: 50px, 30px;
+	/*se le pone dos medidas a la curba de un lado 30 y del otro 50*/
+    box-shadow: inset -10px 10px 5px orange;
+    /*crea la sombra hacia dntro si lo pongo negativo la sombra se
+    va a otro lado del cuadro
+    box-shodow:10px 0px 0px red,
+               20px 0px opx  green  
+               crea otra sombra del lado que le indiques del div*/
+
+
+
+}
+
+.modelosImg{
+
+	
+	width: 600px;
+	height: 350px;
+	margin-bottom: 5px;
+    
+}
+
+figure{
+	margin-top: 3px;
+	margin-bottom: 10px;
+	position: absolute;
+}
+
+.modelos2
+{
+	height: 90px;
+	width: 200px;
+	color:red;
+		
+}
+
+/*:before es un pseudoelemnto pueden ser pequeñas imagenes que apareen antes del texto ...para poner cordenadas  necesita
+un position pra saber con respeccto a que posicionarse toma como refercia el principio delelemento....tambien esta el after*/
+
+#pseudo:before{
+	content: "XD XD XD";
+
+}
+
+/*
+para poner el tipo de fuente interna
+strong#frase
+{
+	color: gray;
+	font-size:18px;
+	font-family: "irlandesa",Arial;
+}	*/
+
+p{
+	font-family: 'Indie Flower', cursive;
+}
+
+/*fin de div pricipal*/
+.videosModelos{
+	background: gray;
+	margin-bottom: 1%;
+	margin-left:1%;
+	width: 17%;
+	height: 100%;
+	border-radius: 1em;
+	box-shadow: 10px 10px 5px red;
+	/*primeros 10 px desplazamiento horizontal, a un lado
+	  desplazamiento vertical hacia abajp
+	  0 es el difuminado entre mas grande el numero se difmina mas 
+	  0 es solido 
+	  color */
+
+
+}
+.videosModelos, .modelos
+{
+	float:left;
+	display: inline-block;
+}
+
+.altura{
+	margin-top: 2px;
+	height:500px;
+}
+ 
+
+.videosAside{
+	margin-top: 1px;
+	margin-bottom:  auto;
+	margin-left: auto;
+	margin-right: auto;
+    display:list-item;
+}  
+
+/*footer------------*/
+
+/* :hover cambia de color a los textos cuando pasas el raton...se utiliza para animacones*/
+
+.pHover:hover
+{
+   color:orange;
+   font-weight: bolder;
+}
+
+
+.pie{
+    	
+    height: 30%;
+	width: 60%;
+	color:black;
+	font-size:40px;
+	clear: both;
+	background: sienna;
+
+
+
+      }
+.fuente1{
+	font-family: arial;
+	font-weight: 700;
+	font-style: normal;
+	text-align: justify;
+	text-decoration: line-through;
+	word-spacing: 5px; /*espaciado entre palabaras*/
+}
+.fuente2{
+	font-family: arial;
+	font-weight: 700;
+	font-style: normal;
+	text-align: justify;
+	font-variant:small-caps; /*pone todas enmayuscua pero la primera la pone mas grande*/
+    text-indent: 14px;  /*Identacion*/
+
+}
+
+.fuente3{
+	font-family: arial;
+	font-weight: 700;
+	font-style: normal;
+	text-align: justify;
+	letter-spacing:-1; /*espacio entre letras*/
+}
+
+.fuente4:first-letter{
+
+	font-size:80px; /*pseudolemento de los parrafos este hace la primera letra mas grande*/
+}
+.fuente5:first-line{
+	font-size:60px; /*la primer linea del parafo sera mas grande*/
+}
+/*valores fot- weight pueden ser
+normal 400
+bold 700
+bolder 900
+lighter 100
+
+font-style valores 
+normal
+italic u oblique
+
+text-align valores
+left
+right 
+center o justify
+
+valores text-decoration
+normal o none
+underline : se pone una linea ariba
+line-trought: tacha el texto
+
+text-transform
+capitalize primeras letras mayuculas
+uppercase letras en minuscula*/
